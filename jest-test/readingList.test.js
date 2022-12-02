@@ -40,6 +40,25 @@ describe('checking', ()=>{
             //Assert 
             expect(cut.getBooks()).toBe(1);
         }
+        
+    
+    )
+    test(
+        'when i add 3 books numberRead should return total number equal to 3',
+        ()=>{
+            //Arrange
+            let cut= new readingList()
+            let book=new Book('The Happiness of Alchemy','Al-Ghazi',50,1300)
+            let book1=new Book('The Power of Now','Eckhart Tolle ',258,1997)
+            let book2=new Book('Veronika Decides to Die','Paulo Coelho',250,1998)
+            
+            //Act
+            cut.addBook(book,'November 13,2022',5)
+            cut.addBook(book1,'March 20,2022',5)
+            cut.addBook(book2,'November 13,2021',4)
+            //Assert 
+            expect(cut.numberRead()).toBe(3);
+        }
 
     
     )

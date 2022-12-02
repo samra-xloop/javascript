@@ -22,6 +22,7 @@ class ReadingList{
 
         this.listOfBooks.push({bookObj,dateRead,rating})
     }
+    numberRead(){}
 }
 
 
