@@ -20,7 +20,8 @@ const readingList = require('./readingList');
 
 describe('checking', ()=>{
     test('this is the empty list', ()=>{
-        expect(readingList.getbook).toBe(0);
+        let cut= new readingList()
+        expect(cut.getBooks()).toBe(0);
     })
 })
 

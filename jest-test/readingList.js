@@ -1,8 +1,12 @@
-
-function readingList(){
-    if(Book == null)
-    {
-        return null
+class ReadingList{
+    listOfBooks=[]
+    getBooks(){
+        return this.listOfBooks.length;
     }
 }
-module.exports= readingList
+
+
+cut=new ReadingList()
+console.log(cut.getBooks())
+module.exports= ReadingList
+
