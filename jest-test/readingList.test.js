@@ -16,6 +16,10 @@
     // })
 // })
 
+
+//Given that I visit the site, when I first start, I expect my list to be empty.
+
+
 const readingList = require('./readingList');
 
 describe('checking', ()=>{
@@ -24,4 +28,7 @@ describe('checking', ()=>{
         expect(cut.getBooks()).toBe(0);
     })
 })
+
+
+
 
