@@ -62,6 +62,24 @@ describe('checking', ()=>{
 
     
     )
+    test(
+        'when i remove the book from the list it should no longer exist there',
+        ()=>{
+            //Arrange
+            let cut= new readingList()
+            let book=new Book('The Happiness of Alchemy','Al-Ghazi',50,1300)
+            let book1=new Book('The Power of Now','Eckhart Tolle ',258,1997)
+            
+            //Act
+            cut.addBook(book,'November 13,2022',5)
+            cut.addBook(book1,'March 20,2022',5)
+            cut.removeBook('The Power of Now')
+            //Assert 
+            expect(cut.getBooks()).toBe('The Happiness of Alchemy, 50 pages, read on November 13,2022 ***** ');
+        }
+
+    
+    )
 })
 
 

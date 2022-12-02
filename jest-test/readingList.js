@@ -16,16 +16,30 @@ class ReadingList{
     this.listOfBooks=[]
     }
     getBooks(){
-        return this.listOfBooks.length;
+        getBooksList=[]
+        for(let i of this.listOfBooks){
+            getBooksList.push(`${i["Book"].title}, ${i["Book"].length} pages, read on ${i["Book"].year}, ${i["rating"]*"*"}`)
+        }
+        return getBooksList;
     }
     addBook(bookObj,dateRead, rating){
 
-        this.listOfBooks.push({bookObj,dateRead,rating})
+        this.listOfBooks.push({
+            "Book":bookObj,
+            "dateRead":dateRead,
+            "rating":rating
+        })
     }
-    numberRead(){}
+    numberRead(){
+        return this.listOfBooks.length;
+    }
+
+    removeBook(titleOfBookToBeRemoved){
+
+    }
 }
 
 
 cut=new ReadingList()
-console.log(cut.getBooks())
+console.log(cut.listOfBooks())
 module.exports= ReadingList

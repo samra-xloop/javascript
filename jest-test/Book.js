@@ -7,4 +7,7 @@ class Book {
     }
   }
 
+  // let book=new Book('The Happiness of Alchemy','Al-Ghazi',50,1300)
+  // console.log(book.title)
+
   module.exports=Book
