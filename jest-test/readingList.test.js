@@ -20,6 +20,7 @@
 //Given that I visit the site, when I first start, I expect my list to be empty.
 
 
+const Book = require('./Book');
 const readingList = require('./readingList');
 
 describe('checking', ()=>{
@@ -27,8 +28,20 @@ describe('checking', ()=>{
         let cut= new readingList()
         expect(cut.getBooks()).toBe(0);
     })
-})
 
+    test(
+        'if i add one book it should return length 1',
+        ()=>{
+            //Arrange
+            let cut= new readingList()
+            let book=new Book('The Happiness of Alchemy','Al-Ghazi',50,1300)
+            //Act
+            cut.addBook(book,'November 13,2022',5)
+        }
+
+    
+    )
+})
 
 
 
