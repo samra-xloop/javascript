@@ -37,6 +37,8 @@ describe('checking', ()=>{
             let book=new Book('The Happiness of Alchemy','Al-Ghazi',50,1300)
             //Act
             cut.addBook(book,'November 13,2022',5)
+            //Assert 
+            expect(cut.getBooks()).toBe(1);
         }
 
     

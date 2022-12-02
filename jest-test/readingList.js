@@ -11,12 +11,16 @@
 // module.exports= ReadingList
 const readingList = require('./Book');
 class ReadingList{
-    listOfBooks=[]
+   
+    constructor(){
+    this.listOfBooks=[]
+    }
     getBooks(){
         return this.listOfBooks.length;
     }
     addBook(bookObj,dateRead, rating){
-        
+
+        this.listOfBooks.push({bookObj,dateRead,rating})
     }
 }
 
